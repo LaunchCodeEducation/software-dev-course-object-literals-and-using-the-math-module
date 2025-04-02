@@ -25,64 +25,66 @@ You're building a calculator for an online math game. The calculator must be abl
 ---
 🧭 Instructions:
 
-1️⃣ Write a function for each operation using Math methods  
-2️⃣ Test each function with sample inputs  
-3️⃣ Combine all functions into a single "calculator" program
+1️⃣ Write a function for each of the following operations using Math methods:  
+    - Absolute Value Calculation  
+    - Power Calculation  
+    - Square Root Finder  
+    - Maximum Finder  
+    - Minimum Finder  
+    - Random Integer Generator (inclusive)  
+    - Custom Rounding (to a specific number of decimal places)
+
+2️⃣ Test each function using appropriate sample inputs.  
+
+3️⃣ Combine all of your functions into a single calculator-style program that:
+    - Accepts user input
+    - Allows the user to choose an operation
+    - Displays the result
+
+💡 Bonus:
+Use `prompt()` to create a simple menu system that asks the user to choose which operation to run.
 */
 
-// ============================================
-// 🔧 Individual Operations Using Math
-// ============================================
-
-// Absolute Value Calculation
-function getAbsoluteValue(num) {
-  return Math.abs(num);
-}
-
-// Power Calculation
-function calculatePower(base, exponent) {
-  return Math.pow(base, exponent);
-}
-
-// Square Root Finder
-function findSquareRoot(num) {
-  return Math.sqrt(num);
-}
-
-// Maximum Finder
-function findMax(...nums) {
-  return Math.max(...nums);
-}
-
-// Minimum Finder
-function findMin(...nums) {
-  return Math.min(...nums);
-}
-
-// Random Integer Generator (inclusive)
-function getRandomInteger(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-// Custom Rounding
-function roundToDecimal(num, decimals) {
-  let factor = Math.pow(10, decimals);
-  return Math.round(num * factor) / factor;
-}
 
 // ============================================
-// 🧪 Sample Test Cases (Scenarios for Students)
+// ✍️ Write Your Calculator Functions Below
 // ============================================
 
-console.log("Absolute value of -45.67:", getAbsoluteValue(-45.67));
-console.log("5 raised to the power of 3:", calculatePower(5, 3));
-console.log("Square root of 144:", findSquareRoot(144));
-console.log("Max from [3, 78, -12, 0.5, 27]:", findMax(3, 78, -12, 0.5, 27));
-console.log("Min from [3, 78, -12, 0.5, 27]:", findMin(3, 78, -12, 0.5, 27));
-console.log("Random integer between 1 and 50:", getRandomInteger(1, 50));
-console.log("Round 23.67891 to 2 decimal places:", roundToDecimal(23.67891, 2));
+// 1. Absolute Value Function
+
+
+// 2. Power Calculation Function
+
+
+// 3. Square Root Function
+
+
+// 4. Maximum Value Function
+
+
+// 5. Minimum Value Function
+
+
+// 6. Random Integer Generator Function
+
+
+// 7. Custom Rounding Function
+
 
 // ============================================
-// 💡 Extension:
-// Combine into a menu-based calculator interface using prompt() if desired
+// 🧪 Sample Test Cases
 // ============================================
+// - Find the absolute value of -45.67
+// - Raise 5 to the power of 3
+// - Calculate the square root of 144
+// - Find the max and min from [3, 78, -12, 0.5, 27]
+// - Generate a random number between 1 and 50
+// - Round 23.67891 to 2 decimal places
+
+
+// ============================================
+// 💬 Optional Extension: Menu System
+// ============================================
+// - Prompt the user for input and operation type
+// - Call the appropriate function
+// - Display the result
