@@ -1,48 +1,88 @@
 /*
-Objective:
-Students will create a custom calculator using JavaScript's Math module to perform
-a series of mathematical operations. This activity will help them practice and
-understand how to combine and use various Math methods for common operations.
+===========================================
+🧮 Custom Calculator Using Math Module
+===========================================
 
+🎯 Objective:
+Students will create a custom calculator using JavaScript's built-in Math module
+to perform a series of mathematical operations.
 
+This activity helps reinforce:
+- Combining multiple Math methods
+- Writing modular, testable functions
 
-Instructions:
-Scenario:
-You are building a calculator for an online math game.
-The calculator must include functionality to perform the following:
-  Absolute Value Calculation: Given any number, return its absolute value.
-  
-  Power Calculation: Calculate and return the value of a base raised to a specific power.
-  
-  Square Root Finder: Calculate the square root of a number.
-  
-  Maximum and Minimum Finder: From a given set of numbers, determine the largest and smallest values.
-  
-  Random Number Generator: Generate a random integer within a specified range.
-  
-  Custom Rounding: Round a number to a specified number of decimal places.
+---
+📘 Scenario:
+You're building a calculator for an online math game. The calculator must be able to:
 
+✅ Calculate absolute value  
+✅ Compute powers  
+✅ Find square roots  
+✅ Identify max and min in a set  
+✅ Generate random integers within a range  
+✅ Round numbers to a specific number of decimal places
 
+---
+🧭 Instructions:
 
-Step-by-Step Tasks:
-  Write a function for each operation listed above using the Math module.
-  
-  Test each function with sample inputs to ensure it works as intended.
-  
-  Combine the individual functions into a single "calculator" program where the user can select an operation and input the required values.
-
-
-
-  Scenarios for Students:
-  Find the absolute value of -45.67.
-  
-  Raise 5 to the power of 3.
-  
-  Calculate the square root of 144.
-  
-  Determine the largest and smallest values from [3, 78, -12, 0.5, 27].
-  
-  Generate a random number between 1 and 50.
-  
-  Round 23.67891 to 2 decimal places.
+1️⃣ Write a function for each operation using Math methods  
+2️⃣ Test each function with sample inputs  
+3️⃣ Combine all functions into a single "calculator" program
 */
+
+// ============================================
+// 🔧 Individual Operations Using Math
+// ============================================
+
+// Absolute Value Calculation
+function getAbsoluteValue(num) {
+  return Math.abs(num);
+}
+
+// Power Calculation
+function calculatePower(base, exponent) {
+  return Math.pow(base, exponent);
+}
+
+// Square Root Finder
+function findSquareRoot(num) {
+  return Math.sqrt(num);
+}
+
+// Maximum Finder
+function findMax(...nums) {
+  return Math.max(...nums);
+}
+
+// Minimum Finder
+function findMin(...nums) {
+  return Math.min(...nums);
+}
+
+// Random Integer Generator (inclusive)
+function getRandomInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// Custom Rounding
+function roundToDecimal(num, decimals) {
+  let factor = Math.pow(10, decimals);
+  return Math.round(num * factor) / factor;
+}
+
+// ============================================
+// 🧪 Sample Test Cases (Scenarios for Students)
+// ============================================
+
+console.log("Absolute value of -45.67:", getAbsoluteValue(-45.67));
+console.log("5 raised to the power of 3:", calculatePower(5, 3));
+console.log("Square root of 144:", findSquareRoot(144));
+console.log("Max from [3, 78, -12, 0.5, 27]:", findMax(3, 78, -12, 0.5, 27));
+console.log("Min from [3, 78, -12, 0.5, 27]:", findMin(3, 78, -12, 0.5, 27));
+console.log("Random integer between 1 and 50:", getRandomInteger(1, 50));
+console.log("Round 23.67891 to 2 decimal places:", roundToDecimal(23.67891, 2));
+
+// ============================================
+// 💡 Extension:
+// Combine into a menu-based calculator interface using prompt() if desired
+// ============================================
